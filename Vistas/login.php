@@ -35,6 +35,9 @@
         </div>
     </form>
     
+    <?php
+
+    ?>
 
 
     <!-- Optional JavaScript -->

@@ -14,10 +14,11 @@
 
 <body>
     <header>
-        <?php
 
-        ?>
         <div class="container">
+            <?php
+
+            ?>
             <div class="row justify-content-center iniciarSesion" style="margin-top: 20px;">
                 <?php
                 include("Vistas/login.php");
@@ -28,12 +29,22 @@
                     <p>No tienes cuenta?</p>
                 </a>
             </div>
-        </div>
-        <?php
 
-        ?>
+            <?php
+
+            ?>
+            <div class="row justify-content-end">
+                <a href="Vistas/carrito.php"><img src="https://www.cscorporation.com.mx/cs/assets/img/home/carrito_de_compras_paso_1.png" width="30rem"></a>
+            </div>
+        </div>
+
     </header>
-    <h1></h1>
+    <div class="container" style="margin-top: 100px">
+
+        <div class="row justify-content-center">
+            <h1>Bienvenido a mi tienda <?php  ?></h1>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
