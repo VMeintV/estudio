@@ -5,3 +5,8 @@ li {
 .card-body {
     text-align: center;
 }
+
+.form-group {
+    text-align: center;
+    align-items: center;
+}
