@@ -37,9 +37,26 @@
             <?php
 
             ?>
-            <div class="row justify-content-end">
-                <a href="Vistas/carrito.php"><img src="https://www.cscorporation.com.mx/cs/assets/img/home/carrito_de_compras_paso_1.png" width="30rem"></a>
+
+            <div class="row">
+                <?php
+
+                ?>
+                <div class="d-flex justify-content-start">
+                    <button id="perfil" class="btn btn-dark">Perfil</button>
+                </div>
+                <?php
+                //Aqui pones dos echos uno con col-11 y otro con col-12
+                ?>
+                <div class="col-11">
+                </div>
+                <div class="d-flex justify-content-end">
+                    <a href="Vistas/carrito.php"><img src="https://www.cscorporation.com.mx/cs/assets/img/home/carrito_de_compras_paso_1.png" width="30rem"></a>
+                </div>
             </div>
+
+
+
         </div>
 
     </header>

@@ -50,7 +50,7 @@
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
-            <button type="submit" name="comprarTLOU2" class="btn btn-success">Comprar</button>
+            <button type="submit" name="comprarTLOU2" class="btn btn-success">Añadir al carrito</button>
           </div>
         </div>
       </div>
@@ -88,7 +88,7 @@
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
-            <button type="submit" name="comprarRE3" class="btn btn-success">Comprar</button>
+            <button type="submit" name="comprarRE3" class="btn btn-success">Añadir al carrito</button>
           </div>
         </div>
       </div>
@@ -122,7 +122,7 @@
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
-            <button type="submit" name="comprarFF7" class="btn btn-success">Comprar</button>
+            <button type="submit" name="comprarFF7" class="btn btn-success">Añadir al carrito</button>
           </div>
         </div>
       </div>
@@ -163,7 +163,7 @@
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
-            <button type="submit" name="comprarFS" class="btn btn-success">Comprar</button>
+            <button type="submit" name="comprarFS" class="btn btn-success">Añadir al carrito</button>
           </div>
         </div>
       </div>
@@ -199,7 +199,7 @@
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
-            <button type="submit" name="comprarMD" class="btn btn-success">Comprar</button>
+            <button type="submit" name="comprarMD" class="btn btn-success">Añadir al carrito</button>
           </div>
         </div>
       </div>
@@ -235,7 +235,7 @@
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
-            <button type="submit" name="comprarHI" class="btn btn-success">Comprar</button>
+            <button type="submit" name="comprarHI" class="btn btn-success">Añadir al carrito</button>
           </div>
         </div>
       </div>
@@ -277,7 +277,7 @@
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
-            <button type="submit" name="comprarFCS" class="btn btn-success">Comprar</button>
+            <button type="submit" name="comprarFCS" class="btn btn-success">Añadir al carrito</button>
           </div>
         </div>
       </div>
@@ -296,11 +296,18 @@
                 <h5 class="card-title">Barret Wallace</h5>
                 <p>Barret Wallace es un personaje jugador en el videojuego de rol de Square Enix Final Fantasy VII.</p>
               </div>
+              <div class="form-group">
+                <label for="tamañoFCS">Tamaño</label>
+                <select class="form-control" name="tamañoFBW">
+                  <option>Tamaño estandar</option>
+                  <option>Tamaño pequeño</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
-            <button type="submit" name="comprarFBW" class="btn btn-success">Comprar</button>
+            <button type="submit" name="comprarFBW" class="btn btn-success">Añadir al carrito</button>
           </div>
         </div>
       </div>
@@ -321,11 +328,18 @@
                   ficticio del videojuego de disparos en primera persona Overwatch​ desarrollado
                   por Blizzard Entertainment​.</p>
               </div>
+              <div class="form-group">
+                <label for="tamañoFCS">Tamaño</label>
+                <select class="form-control" name="tamañoFW">
+                  <option>Tamaño estandar</option>
+                  <option>Tamaño pequeño</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
-            <button type="submit" name="comprarFW" class="btn btn-success">Comprar</button>
+            <button type="submit" name="comprarFW" class="btn btn-success">Añadir al carrito</button>
           </div>
         </div>
       </div>
@@ -355,11 +369,26 @@
                   persona desarrollado por Infinity Ward y Sledgehammer Games,
                   con el trabajo adicional de Raven Software, y distribuido por Activision. </p>
               </div>
+              <div class="form-group">
+                <label for="tamañoFCS">Tamaño</label>
+                <select class="form-control" name="tamañoPCODMW3">
+                  <option>Chica-S</option>
+                  <option>Mediana-M</option>
+                  <option>Grande-X</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="tamañoFCS">Manga</label>
+                <select class="form-control" name="mangaPCODMW3">
+                  <option>Manga Larga</option>
+                  <option>manga corta</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
-            <button type="submit" name="comprarPCODMW3" class="btn btn-success">Comprar</button>
+            <button type="submit" name="comprarPCODMW3" class="btn btn-success">Añadir al carrito</button>
           </div>
         </div>
       </div>
@@ -381,11 +410,26 @@
                   24 de mayo del 2016, para las plataformas PlayStation 4, Xbox One,
                   Microsoft Windows y Nintendo Switch.​</p>
               </div>
+              <div class="form-group">
+                <label for="tamañoFCS">Tamaño</label>
+                <select class="form-control" name="tamañoPO">
+                  <option>Chica-S</option>
+                  <option>Mediana-M</option>
+                  <option>Grande-X</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="tamañoFCS">Manga</label>
+                <select class="form-control" name="mangaPO">
+                  <option>Manga Larga</option>
+                  <option>manga corta</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
-            <button type="submit" name="comprarPO" class="btn btn-success">Comprar</button>
+            <button type="submit" name="comprarPO" class="btn btn-success">Añadir al carrito</button>
           </div>
         </div>
       </div>
@@ -407,11 +451,26 @@
                   por Midway Games y lanzadas principalmente en máquinas arcade; posteriormente
                   estuvieron disponibles en consolas domésticas.</p>
               </div>
+              <div class="form-group">
+                <label for="tamañoFCS">Tamaño</label>
+                <select class="form-control" name="tamañoPMK">
+                  <option>Chica-S</option>
+                  <option>Mediana-M</option>
+                  <option>Grande-X</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="tamañoFCS">Manga</label>
+                <select class="form-control" name="mangaMK">
+                  <option>Manga Larga</option>
+                  <option>manga corta</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
-            <button type="submit" name="comprarPMK" class="btn btn-success">Comprar</button>
+            <button type="submit" name="comprarPMK" class="btn btn-success">Añadir al carrito</button>
           </div>
         </div>
       </div>
