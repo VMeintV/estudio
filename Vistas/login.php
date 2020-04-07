@@ -9,11 +9,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <?php
+    echo "<style>";
+    include_once "../Estilos/estilos.css";
+    echo "</style>";
+    ?>
+
     <title></title>
 </head>
 
 <body>
-    <form method="POST";>
+    <form method="POST" ;>
         <div class="row justify-content-center">
 
             <div class="col">
@@ -34,9 +40,23 @@
             </div>
         </div>
     </form>
-    
+
     <?php
 
+    include_once "Clases/login_db.php";
+
+    $conectar1 = new IniciarSesion();
+
+    $conectar1->__construct();
+
+    if (isset($_POST["iniciarSesion"])) {
+
+        $usuario = $_POST["usuario"];
+        $contra = $_POST["contraseña"];
+
+
+        $conectar1->obtenerDatosEIniciarSesion($usuario, $contra);
+    }
     ?>
 
 
