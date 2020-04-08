@@ -82,7 +82,7 @@
                   <select class="form-control" name="plataformaRE3">
                     <option>PS4</option>
                     <option>Xbox One</option>
-                    <option>Pc (Windows)</option>
+                    <option>PC (Windows)</option>
                   </select>
                 </div>
               </div>
@@ -157,7 +157,7 @@
                   <label for="plataformaFS">Plataforma</label>
                   <select class="form-control" name="plataformaFS">
                     <option>Xbox One</option>
-                    <option>Pc (Windows)</option>
+                    <option>PC (Windows)</option>
                   </select>
                 </div>
               </div>
@@ -193,7 +193,7 @@
                     <option>Nintendo Switch</option>
                     <option>PS4</option>
                     <option>Xbox One</option>
-                    <option>Pc (Windows y macOS)</option>
+                    <option>PC (Windows y macOS)</option>
                   </select>
                 </div>
               </div>
@@ -229,7 +229,7 @@
                   <select class="form-control" name="plataformaHI">
                     <option>Xbox One</option>
                     <option>Xbox Series X</option>
-                    <option>Pc (Windows)</option>
+                    <option>PC (Windows)</option>
                   </select>
                 </div>
               </div>
