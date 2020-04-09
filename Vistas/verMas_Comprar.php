@@ -18,6 +18,7 @@
 </head>
 
 <body>
+
   <div class="container" style="margin-top: 100px">
 
     <!--Primera parte de juegos-->
@@ -43,9 +44,10 @@
                 </div>
                 <div class="form-group">
                   <label for="plataformaTLOU2">Plataforma</label>
-                  <select class="form-control" name="plataformaTLOU2">
-                    <option>PS4 (Exclusivo)</option>>
-                  </select>
+                  <form method="POST">
+                    <select class="form-control" name="plataformaTLOU2">
+                      <option>PS4 (Exclusivo)</option>>
+                    </select>
                 </div>
               </div>
             </div>
@@ -53,6 +55,7 @@
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
             <button type="submit" name="comprarTLOU2" class="btn btn-success">Añadir al carrito</button>
+            </form>
           </div>
         </div>
       </div>
@@ -79,10 +82,12 @@
                 </div>
                 <div class="form-group">
                   <label for="plataformaRE3">Plataforma</label>
-                  <select class="form-control" name="plataformaRE3">
-                    <option>PS4</option>
-                    <option>Xbox One</option>
-                    <option>PC (Windows)</option>
+                  <form method="POST">
+                    <select class="form-control" name="plataformaRE3">
+                      <option>PS4</option>
+                      <option>Xbox One</option>
+                      <option>PC (Windows)</option>
+                  </form>
                   </select>
                 </div>
               </div>
@@ -91,6 +96,7 @@
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
             <button type="submit" name="comprarRE3" class="btn btn-success">Añadir al carrito</button>
+            </form>
           </div>
         </div>
       </div>
@@ -115,9 +121,10 @@
                 </div>
                 <div class="form-group">
                   <label for="plataformaFF7">Plataforma</label>
-                  <select class="form-control" name="plataformaFF7">
-                    <option>PS4 (Exclusiva temporal)</option>>
-                  </select>
+                  <form method="POST">
+                    <select class="form-control" name="plataformaFF7">
+                      <option>PS4 (Exclusiva temporal)</option>>
+                    </select>
                 </div>
               </div>
             </div>
@@ -125,6 +132,8 @@
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
             <button type="submit" name="comprarFF7" class="btn btn-success">Añadir al carrito</button>
+            </form>
+            </form>
           </div>
         </div>
       </div>
@@ -155,10 +164,11 @@
                 </div>
                 <div class="form-group">
                   <label for="plataformaFS">Plataforma</label>
-                  <select class="form-control" name="plataformaFS">
-                    <option>Xbox One</option>
-                    <option>PC (Windows)</option>
-                  </select>
+                  <form method="POST">
+                    <select class="form-control" name="plataformaFS">
+                      <option>Xbox One</option>
+                      <option>PC (Windows)</option>
+                    </select>
                 </div>
               </div>
             </div>
@@ -166,6 +176,8 @@
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
             <button type="submit" name="comprarFS" class="btn btn-success">Añadir al carrito</button>
+            </form>
+            </form>
           </div>
         </div>
       </div>
@@ -189,12 +201,13 @@
                 </div>
                 <div class="form-group">
                   <label for="plataformaMD">Plataforma</label>
-                  <select class="form-control" name="plataformaMD">
-                    <option>Nintendo Switch</option>
-                    <option>PS4</option>
-                    <option>Xbox One</option>
-                    <option>PC (Windows y macOS)</option>
-                  </select>
+                  <form method="POST">
+                    <select class="form-control" name="plataformaMD">
+                      <option>Nintendo Switch</option>
+                      <option>PS4</option>
+                      <option>Xbox One</option>
+                      <option>PC (Windows y macOS)</option>
+                    </select>
                 </div>
               </div>
             </div>
@@ -202,6 +215,8 @@
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
             <button type="submit" name="comprarMD" class="btn btn-success">Añadir al carrito</button>
+            </form>
+            </form>
           </div>
         </div>
       </div>
@@ -226,11 +241,12 @@
                 </div>
                 <div class="form-group">
                   <label for="plataformaHI">Plataforma</label>
-                  <select class="form-control" name="plataformaHI">
-                    <option>Xbox One</option>
-                    <option>Xbox Series X</option>
-                    <option>PC (Windows)</option>
-                  </select>
+                  <form method="POST">
+                    <select class="form-control" name="plataformaHI">
+                      <option>Xbox One</option>
+                      <option>Xbox Series X</option>
+                      <option>PC (Windows)</option>
+                    </select>
                 </div>
               </div>
             </div>
@@ -238,6 +254,7 @@
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
             <button type="submit" name="comprarHI" class="btn btn-success">Añadir al carrito</button>
+            </form>
           </div>
         </div>
       </div>
@@ -269,10 +286,11 @@
                 </div>
                 <div class="form-group">
                   <label for="tamañoFCS">Tamaño</label>
-                  <select class="form-control" name="tamañoFCS">
-                    <option>Tamaño estandar</option>
-                    <option>Tamaño pequeño</option>
-                  </select>
+                  <form method="POST">
+                    <select class="form-control" name="tamañoFCS">
+                      <option>Tamaño estandar</option>
+                      <option>Tamaño pequeño</option>
+                    </select>
                 </div>
               </div>
             </div>
@@ -280,6 +298,7 @@
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
             <button type="submit" name="comprarFCS" class="btn btn-success">Añadir al carrito</button>
+            </form>
           </div>
         </div>
       </div>
@@ -300,16 +319,18 @@
               </div>
               <div class="form-group">
                 <label for="tamañoFCS">Tamaño</label>
-                <select class="form-control" name="tamañoFBW">
-                  <option>Tamaño estandar</option>
-                  <option>Tamaño pequeño</option>
-                </select>
+                <form method="POST">
+                  <select class="form-control" name="tamañoFBW">
+                    <option>Tamaño estandar</option>
+                    <option>Tamaño pequeño</option>
+                  </select>
               </div>
             </div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
             <button type="submit" name="comprarFBW" class="btn btn-success">Añadir al carrito</button>
+            </form>
           </div>
         </div>
       </div>
@@ -332,16 +353,18 @@
               </div>
               <div class="form-group">
                 <label for="tamañoFCS">Tamaño</label>
-                <select class="form-control" name="tamañoFW">
-                  <option>Tamaño estandar</option>
-                  <option>Tamaño pequeño</option>
-                </select>
+                <form method="POST">
+                  <select class="form-control" name="tamañoFW">
+                    <option>Tamaño estandar</option>
+                    <option>Tamaño pequeño</option>
+                  </select>
               </div>
             </div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
             <button type="submit" name="comprarFW" class="btn btn-success">Añadir al carrito</button>
+            </form>
           </div>
         </div>
       </div>
@@ -373,11 +396,12 @@
               </div>
               <div class="form-group">
                 <label for="tamañoFCS">Tamaño</label>
-                <select class="form-control" name="tamañoPCODMW3">
-                  <option>Chica-S</option>
-                  <option>Mediana-M</option>
-                  <option>Grande-X</option>
-                </select>
+                <form method="POST">
+                  <select class="form-control" name="tamañoPCODMW3">
+                    <option>Chica-S</option>
+                    <option>Mediana-M</option>
+                    <option>Grande-X</option>
+                  </select>
               </div>
               <div class="form-group">
                 <label for="tamañoFCS">Manga</label>
@@ -391,6 +415,7 @@
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
             <button type="submit" name="comprarPCODMW3" class="btn btn-success">Añadir al carrito</button>
+            </form>
           </div>
         </div>
       </div>
@@ -414,11 +439,12 @@
               </div>
               <div class="form-group">
                 <label for="tamañoFCS">Tamaño</label>
-                <select class="form-control" name="tamañoPO">
-                  <option>Chica-S</option>
-                  <option>Mediana-M</option>
-                  <option>Grande-X</option>
-                </select>
+                <form method="POST">
+                  <select class="form-control" name="tamañoPO">
+                    <option>Chica-S</option>
+                    <option>Mediana-M</option>
+                    <option>Grande-X</option>
+                  </select>
               </div>
               <div class="form-group">
                 <label for="tamañoFCS">Manga</label>
@@ -432,6 +458,7 @@
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
             <button type="submit" name="comprarPO" class="btn btn-success">Añadir al carrito</button>
+            </form>
           </div>
         </div>
       </div>
@@ -455,11 +482,12 @@
               </div>
               <div class="form-group">
                 <label for="tamañoFCS">Tamaño</label>
-                <select class="form-control" name="tamañoPMK">
-                  <option>Chica-S</option>
-                  <option>Mediana-M</option>
-                  <option>Grande-X</option>
-                </select>
+                <form method="POST">
+                  <select class="form-control" name="tamañoPMK">
+                    <option>Chica-S</option>
+                    <option>Mediana-M</option>
+                    <option>Grande-X</option>
+                  </select>
               </div>
               <div class="form-group">
                 <label for="tamañoFCS">Manga</label>
@@ -473,6 +501,7 @@
           <div class="modal-footer">
             <button class="btn btn-dark" data-dismiss="modal">Ver menos</button>
             <button type="submit" name="comprarPMK" class="btn btn-success">Añadir al carrito</button>
+            </form>
           </div>
         </div>
       </div>
@@ -482,6 +511,9 @@
     <!--Playera COD: Modern Warfare 3-->
     <!--Playera Overwatch-->
     <!--Playera Mortal Kombat-->
+
+
+
 
 
   </div>

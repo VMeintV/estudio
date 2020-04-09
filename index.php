@@ -24,8 +24,12 @@
 
         <div class="container">
             <?php
+
+            include "Clases/carrito_cookie.php";
+
+
             session_start();
-            if (!isset($_SESSION["usuario"]) ) {
+            if (!isset($_SESSION["usuario"])) {
             ?>
                 <div class="row justify-content-center iniciarSesion" style="margin-top: 20px;">
                     <?php
