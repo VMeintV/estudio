@@ -159,3 +159,29 @@ if ($conexion->query($sqlp) === true) {
     die("Error " . $conexion->error);
 }
 */
+
+//Crear tabla de pedidos
+/*
+$sqlpe = "CREATE TABLE Pedidos(
+    id_pedido INT (10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    cliente VARCHAR (10) NOT NULL,
+    nombre_articulo VARCHAR (20) NOT NULL,
+    plataforma VARCHAR (20),
+    tamano VARCHAR (10),
+    tipo_manga VARCHAR (10),
+    unidades INT (10) NOT NULL)";
+
+if ($conexion->query($sqlpe) === true) {
+    echo "Tabla creada correctamente" . "<br>";
+} else {
+    die("Error " . $conexion->error);
+}
+
+$sql4 = "ALTER TABLE Pedidos DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci";
+
+if ($conexion->query($sql4) === true) {
+    echo "Cotejamiento cambiado exitosamente";
+} else {
+    die("Error " . $conexion->error);
+}
+*/

@@ -46,7 +46,7 @@
                   <label for="plataformaTLOU2">Plataforma</label>
                   <form method="POST">
                     <select class="form-control" name="plataformaTLOU2">
-                      <option>PS4 (Exclusivo)</option>>
+                      <option value="1">PS4 (Exclusivo)</option>>
                     </select>
                 </div>
               </div>
@@ -84,9 +84,9 @@
                   <label for="plataformaRE3">Plataforma</label>
                   <form method="POST">
                     <select class="form-control" name="plataformaRE3">
-                      <option>PS4</option>
-                      <option>Xbox One</option>
-                      <option>PC (Windows)</option>
+                      <option value="3">PS4</option>
+                      <option value="2">Xbox One</option>
+                      <option value="4">PC (Windows)</option>
                   </form>
                   </select>
                 </div>
@@ -123,7 +123,7 @@
                   <label for="plataformaFF7">Plataforma</label>
                   <form method="POST">
                     <select class="form-control" name="plataformaFF7">
-                      <option>PS4 (Exclusiva temporal)</option>>
+                      <option value="5">PS4 (Exclusiva temporal)</option>>
                     </select>
                 </div>
               </div>
@@ -166,8 +166,8 @@
                   <label for="plataformaFS">Plataforma</label>
                   <form method="POST">
                     <select class="form-control" name="plataformaFS">
-                      <option>Xbox One</option>
-                      <option>PC (Windows)</option>
+                      <option value="6">Xbox One</option>
+                      <option value="7">PC (Windows)</option>
                     </select>
                 </div>
               </div>
@@ -203,10 +203,10 @@
                   <label for="plataformaMD">Plataforma</label>
                   <form method="POST">
                     <select class="form-control" name="plataformaMD">
-                      <option>Nintendo Switch</option>
-                      <option>PS4</option>
-                      <option>Xbox One</option>
-                      <option>PC (Windows y macOS)</option>
+                      <option value="8">Nintendo Switch</option>
+                      <option value="9">PS4</option>
+                      <option value="10">Xbox One</option>
+                      <option value="11">PC (Windows y macOS)</option>
                     </select>
                 </div>
               </div>
@@ -243,9 +243,9 @@
                   <label for="plataformaHI">Plataforma</label>
                   <form method="POST">
                     <select class="form-control" name="plataformaHI">
-                      <option>Xbox One</option>
-                      <option>Xbox Series X</option>
-                      <option>PC (Windows)</option>
+                      <option value="12">Xbox One</option>
+                      <option value="13">Xbox Series X</option>
+                      <option value="14">PC (Windows)</option>
                     </select>
                 </div>
               </div>
@@ -288,8 +288,8 @@
                   <label for="tamañoFCS">Tamaño</label>
                   <form method="POST">
                     <select class="form-control" name="tamañoFCS">
-                      <option>Tamaño estandar</option>
-                      <option>Tamaño pequeño</option>
+                      <option value="15">Tamaño estandar</option>
+                      <option value="16">Tamaño pequeño</option>
                     </select>
                 </div>
               </div>
@@ -321,8 +321,8 @@
                 <label for="tamañoFCS">Tamaño</label>
                 <form method="POST">
                   <select class="form-control" name="tamañoFBW">
-                    <option>Tamaño estandar</option>
-                    <option>Tamaño pequeño</option>
+                    <option value="17">Tamaño estandar</option>
+                    <option value="18">Tamaño pequeño</option>
                   </select>
               </div>
             </div>
@@ -355,8 +355,8 @@
                 <label for="tamañoFCS">Tamaño</label>
                 <form method="POST">
                   <select class="form-control" name="tamañoFW">
-                    <option>Tamaño estandar</option>
-                    <option>Tamaño pequeño</option>
+                    <option value="19">Tamaño estandar</option>
+                    <option value="20">Tamaño pequeño</option>
                   </select>
               </div>
             </div>
@@ -398,17 +398,13 @@
                 <label for="tamañoFCS">Tamaño</label>
                 <form method="POST">
                   <select class="form-control" name="tamañoPCODMW3">
-                    <option>Chica-S</option>
-                    <option>Mediana-M</option>
-                    <option>Grande-X</option>
+                    <option value="21">Chica-S con Manga larga</option>
+                    <option value="22">Chica-S con Manga corta</option>
+                    <option value="23">Mediana-M con Manga larga</option>
+                    <option value="24">Mediana-M con Manga corta</option>
+                    <option value="25">Grande-X con Manga larga</option>
+                    <option value="26">Grande-X con Manga corta</option>
                   </select>
-              </div>
-              <div class="form-group">
-                <label for="tamañoFCS">Manga</label>
-                <select class="form-control" name="mangaPCODMW3">
-                  <option>Manga Larga</option>
-                  <option>manga corta</option>
-                </select>
               </div>
             </div>
           </div>
@@ -441,17 +437,13 @@
                 <label for="tamañoFCS">Tamaño</label>
                 <form method="POST">
                   <select class="form-control" name="tamañoPO">
-                    <option>Chica-S</option>
-                    <option>Mediana-M</option>
-                    <option>Grande-X</option>
+                    <option value="27">Chica-S con Manga larga</option>
+                    <option value="28">Chica-S con Manga corta</option>
+                    <option value="29">Mediana-M con Manga larga</option>
+                    <option value="30">Mediana-M con Manga corta</option>
+                    <option value="31">Grande-X con Manga larga</option>
+                    <option value="32">Grande-X con Manga corta</option>
                   </select>
-              </div>
-              <div class="form-group">
-                <label for="tamañoFCS">Manga</label>
-                <select class="form-control" name="mangaPO">
-                  <option>Manga Larga</option>
-                  <option>manga corta</option>
-                </select>
               </div>
             </div>
           </div>
@@ -484,17 +476,13 @@
                 <label for="tamañoFCS">Tamaño</label>
                 <form method="POST">
                   <select class="form-control" name="tamañoPMK">
-                    <option>Chica-S</option>
-                    <option>Mediana-M</option>
-                    <option>Grande-X</option>
+                    <option value="33">Chica-S con Manga larga</option>
+                    <option value="34">Chica-S con Manga corta</option>
+                    <option value="35">Mediana-M con Manga larga</option>
+                    <option value="36">Mediana-M con Manga corta</option>
+                    <option value="37">Grande-X con Manga larga</option>
+                    <option value="38">Grande-X con Manga corta</option>
                   </select>
-              </div>
-              <div class="form-group">
-                <label for="tamañoFCS">Manga</label>
-                <select class="form-control" name="mangaMK">
-                  <option>Manga Larga</option>
-                  <option>manga corta</option>
-                </select>
               </div>
             </div>
           </div>

@@ -51,6 +51,26 @@
 
         <?php
 
+        for ($i = 1; $i <= 38; $i++) {
+            if (!isset($_COOKIE["$i"])) {
+                setcookie($i, "0", time() + 2592000);
+            }
+        }
+
+        echo "<table class='table'>";
+
+        for ($i = 1; $i <= 38; $i++) {
+            if (is_numeric($_COOKIE["$i"])) {
+                if($_COOKIE["$i"] >= 1){
+                    echo "<tr>";
+                    echo "<td>" . $i . "</td>";
+                    echo "<td>" . $_COOKIE["$i"] . "</td>";
+                    echo "</tr>";
+                }
+            }
+        }
+
+        echo "</table>";
 
 
 

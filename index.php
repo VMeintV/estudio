@@ -25,8 +25,7 @@
         <div class="container">
             <?php
 
-            include "Clases/carrito_cookie.php";
-
+            require "Clases/carrito_cookie_db.php";
 
             session_start();
             if (!isset($_SESSION["usuario"])) {
