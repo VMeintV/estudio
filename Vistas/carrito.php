@@ -59,12 +59,24 @@
 
         echo "<table class='table'>";
 
+        require "../Clases/carrito_tabla.php";
+
+        $enviar = new Datos();
+
         for ($i = 1; $i <= 38; $i++) {
             if (is_numeric($_COOKIE["$i"])) {
-                if($_COOKIE["$i"] >= 1){
+                if ($_COOKIE["$i"] >= 1) {
+                    $cantidad = $_COOKIE["$i"];
                     echo "<tr>";
-                    echo "<td>" . $i . "</td>";
-                    echo "<td>" . $_COOKIE["$i"] . "</td>";
+                    if ($i >= 1 && $i <= 14) {
+                        $enviar->ObtenerDatosJuegos($i, $cantidad);
+                    }
+                    if ($i >= 15 && $i <= 20) {
+                        $enviar->ObtenerDatosFiguras($i, $cantidad);
+                    }
+                    if ($i >= 21 && $i <= 38) {
+                        $enviar->ObtenerDatosPlayeras($i, $cantidad);
+                    }
                     echo "</tr>";
                 }
             }

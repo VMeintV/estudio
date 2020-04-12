@@ -129,3 +129,7 @@ if (isset($_POST["comprarPMK"])) {
     $cookieV = $cookieV + 1;
     setcookie($cookie, $cookieV, time() + 2592000);
 }
+
+
+//Carrito-Tabla
+
