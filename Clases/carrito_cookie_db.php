@@ -10,16 +10,6 @@ for ($i = 1; $i <= 38; $i++) {
 
 //*/
 /*
-if (isset($_SERVER['HTTP_COOKIE'])) {
-    $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
-    foreach($cookies as $cookie) {
-        $parts = explode('=', $cookie);
-        $name = trim($parts[0]);
-        setcookie($name, '', time()-2592000);
-        setcookie($name, '', time()-2592000, '/');
-    }
-}
-
 //*/
 /*
 foreach ($_COOKIE as $name => $value) {
@@ -132,4 +122,3 @@ if (isset($_POST["comprarPMK"])) {
 
 
 //Carrito-Tabla
-

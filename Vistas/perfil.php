@@ -20,6 +20,14 @@
 </head>
 
 <body>
+
+    <script language="JavaScript">
+        function redireccionar() {
+            setTimeout("location.href='perfil.php'", 5000);
+        }
+    </script>
+
+
     <?php
 
     include_once "../Clases/login_db.php";
@@ -59,16 +67,169 @@
                 </div>
             </div>
         </div>
+        <div class="row justify-content-center" id="abonado1">
+            <h6>Tu cuenta cuenta con un credito de:</h6>
+        </div>
 
-        <div class="row justify-content-center" style="margin-bottom: 20px;">
+        <div class="row justify-content-center" id="abonado" style="margin-top: 50px; margin-bottom: 50px;">
+            <div class="col"></div>
+            <?php
+
+            MostrarDesposito();
+
+            function MostrarDesposito()
+            {
+                try {
+                    $conexion_bd = new mysqli("localhost", "Meint", "XC7jlFQSGZAsrEhm", "tiendaMeint");
+
+                    $sqlD = "SELECT * FROM Usuarios WHERE usuario ='" .  $_SESSION["usuario"] . "'";
+
+                    $sentencia1 = $conexion_bd->query($sqlD);
+
+                    while ($resultado = $sentencia1->fetch_assoc()) {
+                        echo "<input type='number' style='width: 200px;' value= '" . $resultado["deposito"] . "'' disabled name='desposito' class='form-control'>";
+                    }
+                } catch (Exception $e) {
+                    echo "Error: " . $e->getLine();
+                }
+            }
+
+            ?>
+            <div class="col"></div>
+        </div>
+
+        <div class="row justify-content-center" id="abonar1" style="margin-bottom: 50px;">
+            <button type="button" class="btn btn-primary" id="abonar">Abonar</button>
+        </div>
+
+
+        <form method="POST" id="abono1">
+
+            <div class="row justify-content-center">
+                <h6>Introduce la cantidad que deseas abonar (Monto no mayor a $50,000.00):</h6>
+            </div>
+
+            <div class="row justify-content-center" style="margin-bottom: 50px;">
+
+                <div class="row justify-content-center" style="margin-top: 20px;">
+                    <input type="number" style="width: 200px;" name="abono" class="form-control">
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center">
+                <h6>Introduce tu código:</h6>
+            </div>
+
+            <div class="row justify-content-center" style="margin-bottom: 50px;">
+
+                <div class="row justify-content-center" style="margin-top: 20px;">
+                    <input type="password" style="width: 200px;" name="codigo" class="form-control">
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center">
+                <h6>Introduce tu contraseña:</h6>
+            </div>
+
+            <div class="row justify-content-center" style="margin-bottom: 50px;">
+
+                <div class="row justify-content-center" style="margin-top: 20px;">
+                    <input type="password" style="width: 200px;" name="contraseña" class="form-control">
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center" style="margin-top: 50px;">
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-success" name="aceptar">Aceptar</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-danger" id="cancelar">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+
+
+
+        <?php
+
+        if (isset($_POST["aceptar"])) {
+
+            $codigo = $_POST["codigo"];
+            $contraseña = $_POST["contraseña"];
+            $monto = $_POST["abono"];
+
+            if ($monto > 0 && $monto <= 50000) {
+                try {
+                    $conexion_bd = new mysqli("localhost", "Meint", "XC7jlFQSGZAsrEhm", "tiendaMeint");
+
+                    $sqlA = "SELECT * FROM Usuarios WHERE usuario ='" .  $_SESSION["usuario"] . "'AND codigo= '" . $codigo . "'
+                    AND contra= '" . $contraseña . "'";
+
+                    $sentencia2 = $conexion_bd->query($sqlA);
+
+                    if ($sentencia2 == true) {
+
+                        while ($resultado1 = $sentencia2->fetch_assoc()) {
+                            $deposito = $resultado1["deposito"];
+                            $id = $resultado1["id_cliente"];
+                        }
+
+                        $deposito = $deposito + $monto;
+
+                        try {
+                            $sqlD1 = "UPDATE Usuarios SET deposito='" . $deposito . "' WHERE id_cliente='" .  $id . "'";
+
+                            $sentencia3 = $conexion_bd->query($sqlD1);
+
+                            if ($sentencia3 == true) {
+        ?>
+                                <div class="row justify-content-center" id="depositado">
+                                    <div class="alert alert-success" role="alert">
+                                        Se a añadido correctamente tu deposito <br>
+                                        Recargando pagina en 5 segundos
+                                    </div>;
+                                </div>
+
+                                <script language="JavaScript">
+                                    redireccionar();
+                                </script>
+
+        <?php
+                            } else {
+                                echo "Error al introducir los datos en la tabla";
+                            }
+                        } catch (Exception $e) {
+                            echo "Error: " . $e->getLine();
+                        }
+                    } else {
+                        echo "Error: Contraseña o codigo incorrecto.";
+                    }
+                } catch (Exception $e) {
+                    echo "Error: " . $e->getLine();
+                }
+            } else {
+                echo "Error: monto superado o inferior";
+            }
+        }
+
+        ?>
+
+
+        <div class="row justify-content-center" style="margin-bottom: 20px; margin-top: 50px;">
             <form method="POST">
                 <button name="cerrarSesion" type="submit" class="btn btn-danger">Cerrar Sesión</button>
             </form>
         </div>
 
+
         <?php
-
-
         if (isset($_POST["cerrarSesion"])) {
             $cerrarSesion = new IniciarSesion();
 
@@ -76,6 +237,10 @@
 
             header("Location: ../index.php");
         }
+
+
+
+
         ?>
 
 
@@ -89,6 +254,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="../acciones1.js"></script>
+    <script src="../acciones2.js"></script>
 
 </body>
 

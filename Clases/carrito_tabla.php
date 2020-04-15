@@ -19,7 +19,11 @@ class Datos
                 if ($resultado["unidades"] >= $cantidad) {
                     $cantidad1 = $cantidad * $resultado["precio"];
                     echo "<td>" . $resultado["nombre_articulo"] . "</td>" . "<td>" . $resultado["plataforma"] . "</td>"
-                        . "<td>" . $cantidad1 . "</td>";
+                        . "<td>$" . $cantidad1 . "</td>" . "<td>
+                        <button type='submit' name='" . $cookie . "' class='close'  aria-label='Close'>
+                        <span aria-hidden='true'>&times;</span>
+                      </button></td>";
+                    return $cantidad1;
                 }
             }
         } catch (Exception $e) {
@@ -40,7 +44,11 @@ class Datos
                 if ($resultado["unidades"] >= $cantidad) {
                     $cantidad1 = $cantidad * $resultado["precio"];
                     echo "<td>" . $resultado["nombre_articulo"] . "</td>" . "<td>" . $resultado["tamano"] . "</td>"
-                        . "<td>" . $cantidad1 . "</td>";
+                        . "<td>$" . $cantidad1 . "</td>" . "<td>
+                        <button type='submit' name='" . $cookie . "' class='close'  aria-label='Close'>
+                        <span aria-hidden='true'>&times;</span>
+                      </button></td>";
+                    return $cantidad1;
                 }
             }
         } catch (Exception $e) {
@@ -60,7 +68,18 @@ class Datos
             while ($resultado = $sentencia1->fetch_assoc()) {
                 if ($resultado["unidades"] >= $cantidad) {
                     $cantidad1 = $cantidad * $resultado["precio"];
-                    echo "<td>" . $resultado["nombre_articulo"] . "</td>" . "<td>" . $resultado["tamano"] . $resultado["tipo_manga"] . "</td>" . "<td>" . $cantidad1 . "</td>";
+                    if ($resultado["tipo_manga"] == "L") {
+                        $resultado["tipo_manga"] = "Manga larga";
+                    }
+                    if ($resultado["tipo_manga"] == "C") {
+                        $resultado["tipo_manga"] = "Manga corta";
+                    }
+                    echo "<td>" . $resultado["nombre_articulo"] . "</td>" . "<td>" . $resultado["tamano"] . " - " .
+                        $resultado["tipo_manga"] . "</td>" . "<td>$" . $cantidad1 . "</td>" . "<td>
+                        <button type='submit' name='" . $cookie . "' class='close'  aria-label='Close'>
+                        <span aria-hidden='true'>&times;</span>
+                      </button></td>";
+                    return $cantidad1;
                 }
             }
         } catch (Exception $e) {

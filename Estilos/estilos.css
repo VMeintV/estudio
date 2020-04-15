@@ -10,3 +10,7 @@ li {
     text-align: center;
     align-items: center;
 }
+
+#abono1 {
+    display: none;
+}
