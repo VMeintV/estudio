@@ -19,45 +19,74 @@
 </head>
 
 <body>
-    <form method="POST" ;>
-        <div class="row justify-content-center">
 
-            <div class="col">
-                <div class="input-group mb-3" style="width: 300px;">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                    </div>
-                    <input type="text" name="usuario" class="form-control" placeholder="Nombre de Usuario" aria-label="Username" aria-describedby="basic-addon1">
+    <div class="row justify-content-center">
+
+        <div class="col" style="margin-top: 20px;">
+            <div class="input-group mb-3" style="width: 300px;">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">@</span>
                 </div>
-            </div>
-            <div class="col">
-                <div class="input-group mb-3" style="width: 300px;">
-                    <input type="password" name="contraseña" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-            </div>
-            <div class="col">
-                <button type="submit" name="iniciarSesion" class="btn btn-primary">Iniciar Sesión</button>
+                <input required type="text" id="usuario" class="form-control" placeholder="Nombre de Usuario" aria-label="Username" aria-describedby="basic-addon1">
             </div>
         </div>
-    </form>
+        <div class="col" style="margin-top: 20px;">
+            <div class="input-group mb-3" style="width: 300px;">
+                <input required type="password" id="contraseña" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="col" style="margin-top: 20px;">
+            <button type="submit" onclick="iniciarSesion()" class="btn btn-primary">Iniciar Sesión</button>
+        </div>
+    </div>
 
-    <?php
+    <script type="text/javascript">
+        function iniciarSesion() {
 
-    include_once "Clases/login_db.php";
+            var usuario = document.getElementById("usuario").value;
+            var contraseña = document.getElementById("contraseña").value;
 
-    $conectar1 = new IniciarSesion();
-
-    $conectar1->__construct();
-
-    if (isset($_POST["iniciarSesion"])) {
-
-        $usuario = $_POST["usuario"];
-        $contra = $_POST["contraseña"];
+            if (usuario && contraseña) {
 
 
-        $conectar1->obtenerDatosEIniciarSesion($usuario, $contra);
-    }
-    ?>
+
+                var obj = new XMLHttpRequest();
+
+                obj.open("POST", "Clases/login_db.php", true);
+                obj.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                obj.onreadystatechange = function Borrar() {
+                    function IngresarCuenta() {
+                        var respuesta = obj.responseText;
+                        if (typeof respuesta !== 'undefined') {
+                            var probar = "1";
+                            var probar1 = parseInt(probar);
+                            var respuesta1 = parseInt(respuesta);
+                            if (respuesta1 == probar1) {
+                                console.log("hola");
+                                window.location = "http://localhost/tiendaMeint/Vistas/perfil.php";
+                            } else {                                
+                                
+                                function quitar() {
+                                    document.getElementById("errorSesion").style.display = "none";
+                                }
+                            
+                                function poner (){
+                                    document.getElementById("errorSesion").style.display = "block";
+                                    setTimeout(quitar, 2500);
+                                }
+
+                                setTimeout(poner, 2000);
+
+                            }
+
+                        }
+                    }
+                    IngresarCuenta();
+                }
+                obj.send("usuario" + "=" + usuario + "&" + "contraseña" + "=" + contraseña);
+            }
+        }
+    </script>
 
 
     <!-- Optional JavaScript -->

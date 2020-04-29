@@ -21,11 +21,17 @@ class CrearCuenta extends BD
             $sentencia = $this->conexion_bd->prepare($sql);
 
             $sentencia->execute();
-
+?>
+            <script type="text/javascript">
+                function regresarIndex() {
+                    window.location = "http://localhost/tiendaMeint/index.php";
+                }
+                regresarIndex();
+            </script>
+<?php
             $sentencia->closeCursor();
         } catch (Exception $e) {
             echo "Error: " . $e->getLine();
         }
     }
 }
-

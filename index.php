@@ -9,48 +9,53 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <?php
     echo "<style>";
     include_once "Estilos/estilos.css";
     echo "</style>";
+    session_start();
+    require "Clases/carrito_cookie_db.php";
+
     ?>
 
     <title>Meint's Shop</title>
 </head>
 
-<body>
-    <header>
-
+<body class="index1">
+    <header class="index2">
         <div class="container">
             <?php
-
-            require "Clases/carrito_cookie_db.php";
-
-            session_start();
             if (!isset($_SESSION["usuario"])) {
             ?>
-                <div class="row justify-content-center iniciarSesion" style="margin-top: 20px;">
-                    <?php
-                    include("Vistas/login.php");
-                    ?>
-                </div>
-                <div class="row justify-content-center">
-                    <a href="Vistas/create_account.php">
-                        <p>No tienes cuenta?</p>
-                    </a>
+                <div id="sesion">
+                    <div class="row justify-content-center iniciarSesion">
+                        <?php
+                        include("Vistas/login.php");
+                        ?>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="alert alert-danger" id="errorSesion" role="alert">
+                            Usuario o contraseña incorrectos
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <a href="Vistas/create_account.php">
+                            <p style="color: white">No tienes cuenta?</p>
+                        </a>
+                    </div>
                 </div>
 
             <?php
             }
             ?>
 
-            <div class="row" style="margin-top: 20px;">
+            <div class="row">
                 <?php
                 if (isset($_SESSION["usuario"])) {
                 ?>
-                    <div class="d-flex justify-content-start">
-                        <button id="perfil" class="btn btn-dark">Perfil</button>
+                    <div class="d-flex justify-content-start" style="margin-top: 15px; margin-bottom: 5px; height: 40px;">
+                        <button type="button" id="perfil" class="btn btn-success">Perfil</button>
                     </div>
                 <?php
                 } else {
@@ -58,26 +63,24 @@
                 }
                 ?>
                 <div class="col-11">
+                    <div class="d-flex justify-content-end">
+                        <a style="margin-bottom: 20px; margin-top: 22px;" href="Vistas/carrito.php"><img src="https://www.cscorporation.com.mx/cs/assets/img/home/carrito_de_compras_paso_1.png" width="30rem"></a>
+                    </div>
                 </div>
-                <div class="d-flex justify-content-end">
-                    <a href="Vistas/carrito.php"><img src="https://www.cscorporation.com.mx/cs/assets/img/home/carrito_de_compras_paso_1.png" width="30rem"></a>
-                </div>
+
+
             </div>
 
-
-
-        </div>
-
     </header>
-    <div class="container" style="margin-top: 100px">
+    <div class="container contenedor">
 
-        <div class="row justify-content-center">
-            <h1>Bienvenido a mi tienda <?php  ?></h1>
+        <div class="row justify-content-center" style="margin-top: 30px;">
+            <h1 id="cambiar1" class="sombrear">Bienvenido a mi tienda <?php  ?></h1>
         </div>
 
         <!--Primera parte de juegos-->
         <div class="row justify-content-center" style="margin-top: 100px">
-            <h3>Videojuegos:</h3>
+            <h3 class="articulo">Videojuegos</h3>
         </div>
         <div class="row justify-content-center" style="margin-top: 30px">
             <div class="col">
@@ -148,7 +151,7 @@
 
         <!--Figuras-->
         <div class="row justify-content-center" style="margin-top: 100px">
-            <h3>Figuras (Coleccionables):</h3>
+            <h3 class="articulo">Figuras (Coleccionables)</h3>
         </div>
         <div class="row justify-content-center" style="margin-top: 30px">
             <div class="col">
@@ -185,10 +188,10 @@
 
         <!--Playeras-->
         <div class="row justify-content-center" style="margin-top: 100px">
-            <h3>Playeras:</h3>
+            <h3 class="articulo">Playeras</h3>
         </div>
         <div class="row justify-content-center" style="margin-top: 30px; margin-bottom: 50px;">
-            <div class="col">
+            <div class="col" style="margin-bottom: 150px;">
                 <div class="card PCODMW3" style="width: 20rem;">
                     <img class="card-img-top img-responsive" src="https://d26lpennugtm8s.cloudfront.net/stores/114/482/products/m113-e4408ce114ef527cc815132787035620-1024-1024.jpg">
                     <div class="card-body">
@@ -198,7 +201,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" style="margin-bottom: 150px;">
                 <div class="card PO" style="width: 20rem;">
                     <img class="card-img-top img-responsive" src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/o/v/overwatch-logo-gris_1.jpg">
                     <div class="card-body">
@@ -208,7 +211,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" style="margin-bottom: 150px;">
                 <div class="card PMK" style="width: 20rem;">
                     <img class="card-img-top img-responsive" src="https://ae01.alicdn.com/kf/HTB1XJKzNFXXXXaeXXXXq6xXFXXXa/Nuevo-juego-Mortal-Kombat-hombres-camiseta-MK-Dragon-Man-Camiseta-cuello-redondo-cl-sico-SUB-ZERO.jpg">
                     <div class="card-body">
@@ -222,7 +225,7 @@
     </div>
 
     <?php
-    include("Vistas/verMas_Comprar.php");
+    include "Vistas/verMas_Comprar.php";
     ?>
 
     <!-- Optional JavaScript -->
@@ -230,9 +233,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="acciones.js"></script>
-    <script src="acciones1.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="acciones4.js"></script>
+    <script src="acciones5.js"></script>
 
 </body>
 

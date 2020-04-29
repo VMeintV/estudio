@@ -15,16 +15,16 @@ class Datos
 
             $sentencia1 = $conexion_bd->query($sqlTJ);
 
+
+
             while ($resultado = $sentencia1->fetch_assoc()) {
-                if ($resultado["unidades"] >= $cantidad) {
-                    $cantidad1 = $cantidad * $resultado["precio"];
-                    echo "<td>" . $resultado["nombre_articulo"] . "</td>" . "<td>" . $resultado["plataforma"] . "</td>"
-                        . "<td>$" . $cantidad1 . "</td>" . "<td>
-                        <button type='submit' name='" . $cookie . "' class='close'  aria-label='Close'>
+                $cantidad1 = $cantidad * $resultado["precio"];
+                echo "<tr id='" . $cookie . "'><td>" . $resultado["nombre_articulo"] . " (" . $_COOKIE["$cookie"] . ")</td>" . "<td>" . $resultado["plataforma"] . "</td>"
+                    . "<td>$" . $cantidad1 . "</td>" . "<td>
+                        <button type='submit' onclick='borrarCarrito(this)' name='" . $cookie . "' class='close'  aria-label='Close'>
                         <span aria-hidden='true'>&times;</span>
-                      </button></td>";
-                    return $cantidad1;
-                }
+                      </button></td></tr>";
+                return $cantidad1;
             }
         } catch (Exception $e) {
             echo "Error: " . $e->getLine();
@@ -41,15 +41,13 @@ class Datos
             $sentencia1 = $conexion_bd->query($sqlTF);
 
             while ($resultado = $sentencia1->fetch_assoc()) {
-                if ($resultado["unidades"] >= $cantidad) {
-                    $cantidad1 = $cantidad * $resultado["precio"];
-                    echo "<td>" . $resultado["nombre_articulo"] . "</td>" . "<td>" . $resultado["tamano"] . "</td>"
-                        . "<td>$" . $cantidad1 . "</td>" . "<td>
-                        <button type='submit' name='" . $cookie . "' class='close'  aria-label='Close'>
+                $cantidad1 = $cantidad * $resultado["precio"];
+                echo "<tr id='" . $cookie . "'><td>" . $resultado["nombre_articulo"] . " (" . $_COOKIE["$cookie"] . ")</td>" . "<td>" . $resultado["tamano"] . "</td>"
+                    . "<td>$" . $cantidad1 . "</td>" . "<td>
+                        <button type='submit' onclick='borrarCarrito(this)' name='" . $cookie . "' class='close'  aria-label='Close'>
                         <span aria-hidden='true'>&times;</span>
-                      </button></td>";
-                    return $cantidad1;
-                }
+                      </button></td></tr>";
+                return $cantidad1;
             }
         } catch (Exception $e) {
             echo "Error: " . $e->getLine();
@@ -66,21 +64,19 @@ class Datos
             $sentencia1 = $conexion_bd->query($sqlTP);
 
             while ($resultado = $sentencia1->fetch_assoc()) {
-                if ($resultado["unidades"] >= $cantidad) {
-                    $cantidad1 = $cantidad * $resultado["precio"];
-                    if ($resultado["tipo_manga"] == "L") {
-                        $resultado["tipo_manga"] = "Manga larga";
-                    }
-                    if ($resultado["tipo_manga"] == "C") {
-                        $resultado["tipo_manga"] = "Manga corta";
-                    }
-                    echo "<td>" . $resultado["nombre_articulo"] . "</td>" . "<td>" . $resultado["tamano"] . " - " .
-                        $resultado["tipo_manga"] . "</td>" . "<td>$" . $cantidad1 . "</td>" . "<td>
-                        <button type='submit' name='" . $cookie . "' class='close'  aria-label='Close'>
-                        <span aria-hidden='true'>&times;</span>
-                      </button></td>";
-                    return $cantidad1;
+                $cantidad1 = $cantidad * $resultado["precio"];
+                if ($resultado["tipo_manga"] == "L") {
+                    $resultado["tipo_manga"] = "Manga larga";
                 }
+                if ($resultado["tipo_manga"] == "C") {
+                    $resultado["tipo_manga"] = "Manga corta";
+                }
+                echo "<tr id='" . $cookie . "'><td>" . $resultado["nombre_articulo"] . " (" . $_COOKIE["$cookie"] . ")</td>" . "<td>" . $resultado["tamano"] . " - " .
+                    $resultado["tipo_manga"] . "</td>" . "<td>$" . $cantidad1 . "</td>" . "<td>
+                        <button type='submit' onclick='borrarCarrito(this)' name='" . $cookie . "' class='close'  aria-label='Close'>
+                        <span aria-hidden='true'>&times;</span>
+                      </button></td></tr>";
+                return $cantidad1;
             }
         } catch (Exception $e) {
             echo "Error: " . $e->getLine();

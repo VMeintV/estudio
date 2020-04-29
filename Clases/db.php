@@ -165,10 +165,7 @@ if ($conexion->query($sqlp) === true) {
 $sqlpe = "CREATE TABLE Pedidos(
     id_pedido INT (10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     cliente VARCHAR (10) NOT NULL,
-    nombre_articulo VARCHAR (20) NOT NULL,
-    plataforma VARCHAR (20),
-    tamano VARCHAR (10),
-    tipo_manga VARCHAR (10),
+    id_articulo INT (20) NOT NULL,
     unidades INT (10) NOT NULL)";
 
 if ($conexion->query($sqlpe) === true) {
@@ -180,6 +177,28 @@ if ($conexion->query($sqlpe) === true) {
 $sql4 = "ALTER TABLE Pedidos DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci";
 
 if ($conexion->query($sql4) === true) {
+    echo "Cotejamiento cambiado exitosamente";
+} else {
+    die("Error " . $conexion->error);
+}
+*/
+
+//Crear tabla de carrito
+/*
+$sqlC = "CREATE TABLE Carrito(
+    id_cliente INT(10) NOT NULL,
+    carrito VARCHAR (350) NOT NULL
+)";
+
+if ($conexion->query($sqlC) === true) {
+    echo "Tabla creada correctamente<br>";
+} else {
+    die("Error " . $conexion->error);
+}
+
+$sqlC = "ALTER TABLE Carrito DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci";
+
+if ($conexion->query($sqlC) === true) {
     echo "Cotejamiento cambiado exitosamente";
 } else {
     die("Error " . $conexion->error);
